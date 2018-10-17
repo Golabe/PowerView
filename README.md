@@ -3,8 +3,8 @@
 ![此处输入图片的描述][1]
 ![此处输入图片的描述][2]
 
-##Usage
-##Gradle
+## Usage
+## Gradle
 >  compile 'top.golabe.powerview:library:0.0.2'
 
 ## In layout.xml
