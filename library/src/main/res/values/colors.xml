@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_power_bg_color" >#c5acac</color>
+    <color name="default_power_progress_color">#2ed07f</color>
+</resources>

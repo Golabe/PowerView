@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PowerView">
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="power_bg_color" format="color" />
+        <attr name="power_progress_color" format="color" />
+        <attr name="power_progress" format="integer" />
+        <attr name="power_min" format="integer" />
+        <attr name="power_max" format="integer" />
+
+    </declare-styleable>
+</resources>
