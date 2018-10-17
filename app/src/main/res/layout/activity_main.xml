@@ -11,6 +11,10 @@
 
     <top.golabe.library.PowerView
         android:id="@+id/power"
+        app:power_progress_color="@color/colorPrimaryDark"
+        app:power_bg_color="@color/colorPrimary"
+        app:power_max="100"
+        app:power_min="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
@@ -23,5 +27,16 @@
         android:layout_margin="4dp"
         app:orientation="horizontal"
         app:power_progress="50" />
+
+    <Button
+        android:onClick="add"
+        android:text="增加"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="reduce"
+        android:text="减少"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
