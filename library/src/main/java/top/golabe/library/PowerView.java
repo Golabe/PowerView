@@ -84,7 +84,7 @@ public class PowerView extends View {
             powerProgress = a.getInteger(R.styleable.PowerView_power_progress, 0);
             powerMax = a.getInteger(R.styleable.PowerView_power_max, DEFAULT_POWER_MAX);
             powerMin = a.getInteger(R.styleable.PowerView_power_min, DEFAULT_POWER_MIN);
-            powerTotalProgress = Math.abs(powerMax - powerMin);
+            powerTotalProgress = Math.abs(powerMax)+Math.abs( powerMin);
             orientation=a.getInteger(R.styleable.PowerView_orientation, ORIENTATION_HORIZONTAL);
             checkProgress();
             a.recycle();
@@ -176,7 +176,7 @@ public class PowerView extends View {
         canvas.save();
         canvas.clipPath(mPowerBoxPath);
         canvas.drawPath(mPowerBoxPath, mPowerBgPaint);
-        mPowerRectF.set(0,powerBoxH-(powerBoxH/powerTotalProgress*powerProgress),powerBoxW , powerBoxH);
+        mPowerRectF.set(0,powerBoxH-(powerBoxH/powerTotalProgress*powerTotalProgress/100*powerProgress),powerBoxW , powerBoxH);
         canvas.drawRect(mPowerRectF, mPowerPaint);
         canvas.restore();
     }
@@ -187,7 +187,7 @@ public class PowerView extends View {
         canvas.save();
         canvas.clipPath(mPowerBoxPath);
         canvas.drawPath(mPowerBoxPath, mPowerBgPaint);
-        mPowerRectF.set(0, 0,powerBoxW/powerTotalProgress*powerProgress , powerBoxH);
+        mPowerRectF.set(0, 0,powerBoxW/powerTotalProgress*powerTotalProgress/100*powerProgress , powerBoxH);
         canvas.drawRect(mPowerRectF, mPowerPaint);
         canvas.restore();
     }
